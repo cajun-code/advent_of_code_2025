@@ -21,7 +21,7 @@ fn rotate_dial(position: i32, rotation_string: String) -> (i32, i32){
         "L" => {
             pos = position - amt;
             if pos < START_OF_DIAL {
-                pos = END_OF_DIAL + pos;
+                pos += END_OF_DIAL;
                 if position != 0{
                     rotational_passes += 1;
                 }
